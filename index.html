@@ -9,6 +9,14 @@
 
 
     <style>
+        :root{
+            --blue: #1e90ff;
+            --white: #fff;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
         body {
             background-color: grey;
         }
@@ -26,10 +34,13 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: none;
+            position: relative;
         }
-        /* nav{
-            /* border: 1px solid blue; */
-        } */
+        nav{
+            position: fixed;
+            width: 100%;
+            overflow: hidden;
+        }
         ul{
             list-style-type: none;
             /* border: 1px solid red; */
@@ -40,13 +51,13 @@
         }
         ul li{
             /* border: 1px solid red; */
-            margin: 0 30px;
+            /* margin: 0 30px; */
             padding-top: 20px;
         }
         ul>li:first-child{
             /* border: 3px solid red; */
              width: 100px;
-            height: 25px;
+            height: 55px;
             margin-left: 30px;
         }
         ul>li:nth-child(2) a{
@@ -57,7 +68,6 @@
             color: white;
             font-size: 0.8rem;
             font-family: 'Times New Roman', Times, serif;
-            margin-right: 35px;
         } 
 
         /* #parent {
@@ -88,8 +98,23 @@
                 margin-left: 10px;
             }
         }
+        .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
         h1{
-            
+            position: relative;
+            top: 10rem;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            color: var(--white);
         }
     </style
 
